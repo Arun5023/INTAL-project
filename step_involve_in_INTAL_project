@@ -1,0 +1,78 @@
+Objective : 
+    Add support for Big Integers (numbers greater than 18446744073709551615) in C along
+    with basic mathematical operations and functions.
+
+Step-1: Declare character arrays which are the data structure to be used to present INTALs and
+        initialize elements to 0.
+    • assume all INTALs are at most 1000 digits long, hence using malloc function,
+    declare a 1001 element character array. The 1 extra element will be for the null
+    character \0.
+    • To avoid computing with garbage values, initialize all elements of the declared INTAL
+    to 0.
+    • create a single function which returns 1001 digit INTAL initialized with zeros. 
+    This will be useful later on when trying to instantly create an INTAL.
+
+Step-2: function that compares two INTALs.
+    • Write a function that accepts two INTALs as function parameters and returns 0 or -1 or
+    1 if both INTALs are equal or the first INTAL is lesser than the second INTAL or second
+    INTAL is lesser than the first INTAL respectively.
+    • The function must run in O(n) time (complexity), where n is the number of digits in
+    INTAL or the number of characters in the array.
+    • INTALs passed to the comparator may be of unequal length and should be kept in mind
+    while determining which INTAL is greater.
+
+Step-3: function that adds two INTALs and returns their sum.
+    • Write a function that accepts two INTALs as function parameters and returns the sum
+    of both INTALs.
+    • The function run in O(n) time, where n is the number of digits in INTAL or the
+    number of characters in the array.
+    • INTALs passed to the adder may be of unequal length.
+    • Use the same concept of elementary mathematical addition for adding the INTALs, i.e.,
+    basically in case the ith element exceeds 9, a carryover needs to be made to the next
+    element.
+
+Step-4: function that subtracts two INTALs and returns their difference.
+    • Write a function that accepts two INTALs as function parameters and returns the
+    difference.
+    • The smaller INTAL must always be subtracted from the larger INTAL; so that the result
+    INTAL is always greater than or equal to zero.
+    • The function run in O(n) time, where n is the number of digits in INTAL or the
+    number of characters in the array.
+    • Use the same concept of elementary mathematical subtraction, i.e., basically in case the
+    ith element of the subtrahend exceeds the ith element of the minuend, use the concept
+    of borrow from the neighboring element of the subtrahend. Keep borrowing until
+    found.
+    • The result INTAL not contain any preceding zeros in the result unless the result is
+    zero in which case the INTAL can contain only 1 zero.
+
+Step-5: function which multiplies two INTALs and returns their product.
+    • Since our INTALs support a maximum of 1000 digits, the sum of digits of both
+    multipliers must not exceed 1000.
+    • Write a function that accepts two INTALs as function parameters and returns the
+    product.
+    • In case either of the INTALs is zero, return zero.
+    • In case either of the INTALs is 1, return the other INTAL.
+    • The function run in O(n2) time, where n is the number of digits in INTAL
+
+Step-6: function which divide INTAL to long int and return quotient & remainder.
+    • In case dividend is zero, return zero.
+    • divisor must be greater than zero, as division by zero is not possible.
+    • The function run in O(n) time, where n is the number of digits in INTAL or the
+    number of characters in the array.
+    • The result INTAL not contain any preceding zeros in the result unless the result is
+    zero in which case the INTAL can contain only 1 zero.
+
+Step-7: function that returns the nth Fibonacci INTAL.
+    • Write a function to take an unsigned int n as a parameter and return the nth
+    Fibonacci INTAL.
+    • Refer to the algorithm to compute the nth Fibonacci number. The only additional logic
+    is required to deal with INTALs.
+    • Have 2 INTALs initialized to Zero and One respectively.
+    • Until n terms are generated, keep adding the previous 2 Fibonacci terms as is with the
+    Fibonacci algorithm
+
+Step-8: function that returns the factorial of that number.
+    • Write a function to take an unsigned int n as a parameter and return the factorial
+    represented as an INTAL.
+    • The concept of the factorial of a number remains unchanged. Your part is to
+    incorporate INTAL computations into the algorithm.
